@@ -9,10 +9,32 @@
 //******************************************************************************
 
 #include <iostream>
+#include <fstream>
+#include <string>
+#include <iomanip>
+
 
 using namespace std;
 
 int main () {
+
+  const string FILE_NAME = "data/numbers.txt";
+  const int SENTINEL = -999;
+
+  ifstream inFile;
+  int num, count = 0, sum = 0;
+
+  cout << "*****************" << endl;
+  cout << "Files and Numbers" << endl;
+  cout << "*****************" << endl << endl;
+
+  inFile.open(FILE_NAME);
+  if (inFile.fail()) {
+    cout << "Could not open file" << endl;
+    return EXIT_FAILURE;
+  }
+
+  inFile.close();
 
   return EXIT_SUCCESS;
 }
