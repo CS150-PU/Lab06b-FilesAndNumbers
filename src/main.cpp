@@ -31,7 +31,7 @@ int main () {
   inFile.open(FILE_NAME);
   if (inFile.fail()) {
     cout << "Could not open file" << endl;
-    return EXIT_FAILURE;
+    exit (EXIT_FAILURE);
   }
 
   inFile.close();
